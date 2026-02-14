@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 230 75% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 35 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 230 75% 55%;
+
+    --radius: 0.75rem;
+
+    /* MedMind custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(230, 75%, 55%), hsl(270, 65%, 50%));
+    --gradient-green: linear-gradient(135deg, hsl(160, 60%, 45%), hsl(170, 70%, 50%));
+    --gradient-orange: linear-gradient(135deg, hsl(30, 95%, 55%), hsl(45, 95%, 55%));
+    --gradient-red: linear-gradient(135deg, hsl(350, 70%, 55%), hsl(0, 75%, 55%));
+    --gradient-blue-purple: linear-gradient(135deg, hsl(230, 75%, 55%), hsl(270, 65%, 50%));
+    --gradient-teal: linear-gradient(135deg, hsl(170, 70%, 45%), hsl(190, 80%, 50%));
+    --gradient-search: linear-gradient(135deg, hsl(190, 80%, 45%), hsl(260, 70%, 55%));
+    --gradient-symptom: linear-gradient(135deg, hsl(260, 70%, 55%), hsl(340, 75%, 55%));
+
+    --shadow-card: 0 4px 24px -4px hsl(230 75% 55% / 0.1);
+    --shadow-card-hover: 0 12px 40px -8px hsl(230 75% 55% / 0.2);
+    --shadow-stat: 0 8px 30px -4px hsl(0 0% 0% / 0.15);
+    --shadow-glow: 0 0 40px hsl(230 75% 55% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 30% 8%;
+    --foreground: 210 40% 95%;
+    --card: 222 25% 12%;
+    --card-foreground: 210 40% 95%;
+    --popover: 222 25% 12%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 230 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 35 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 230 75% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-green {
+    background: var(--gradient-green);
+  }
+  .gradient-orange {
+    background: var(--gradient-orange);
+  }
+  .gradient-red {
+    background: var(--gradient-red);
+  }
+  .gradient-blue-purple {
+    background: var(--gradient-blue-purple);
+  }
+  .gradient-teal {
+    background: var(--gradient-teal);
+  }
+  .gradient-search {
+    background: var(--gradient-search);
+  }
+  .gradient-symptom {
+    background: var(--gradient-symptom);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .shadow-stat {
+    box-shadow: var(--shadow-stat);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .glass-card {
+    background: hsl(0 0% 100% / 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 0% 100% / 0.6);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
