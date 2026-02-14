@@ -46,28 +46,16 @@ Track daily health activities and reminders in a clear, structured dashboard.
 ## 🖼 Application Screens
 
 ### 🔔 Reminders
-
-```
 ![Reminders](screenshots/reminders.png)
-```
 
 ### 🔎 Medicine Info
-
-```
 ![Medicine Info](screenshots/medicine-info.png)
-```
 
 ### ⚠️ Symptom Checker
-
-```
 ![Symptom Checker](screenshots/symptom-checker.png)
-```
 
 ### 📅 Daily Summary
-
-```
 ![Daily Summary](screenshots/daily-summary.png)
-```
 
 ---
 
