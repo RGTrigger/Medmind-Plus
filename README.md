@@ -218,7 +218,7 @@ npm run preview
 
 ## 👨‍💻 Author
 
-**Gaurav Kumar**
+**Gaurav,**
 B.Tech – Computer Science & Communication Engineering
 KIIT Deemed to be University
 
