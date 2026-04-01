@@ -235,18 +235,3 @@ This project is developed for educational, research, and innovation purposes.
 ## ⭐ Acknowledgment
 
 MedMind+ is built using modern open-source technologies and inspired by the goal of making healthcare support more accessible and intelligent.
-
----
-
-If you want next:
-
-• add GitHub stats badges
-• create an architecture diagram image
-• add deployment section
-• create hackathon submission version
-• build a portfolio version
-
-Just tell me.
-
-Best regards,
-ChatGPT
